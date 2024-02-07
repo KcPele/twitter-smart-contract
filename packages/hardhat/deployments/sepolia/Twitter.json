@@ -1,0 +1,1081 @@
+{
+  "address": "0x28502c371E6C05B1f5164FcD63Cf366eaD0082f6",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "author",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tweetId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "commentId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Commented",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "follower",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "followed",
+          "type": "address"
+        }
+      ],
+      "name": "Followed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "author",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tweetId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "liker",
+          "type": "address"
+        }
+      ],
+      "name": "Liked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "conversationId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "messageId",
+          "type": "uint256"
+        }
+      ],
+      "name": "MessageSent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "OperatorRevoked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "author",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tweetId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "retweetId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Retweeted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tweetId",
+          "type": "uint256"
+        }
+      ],
+      "name": "TweetDeleted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tweetId",
+          "type": "uint256"
+        }
+      ],
+      "name": "TweetEdited",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "author",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tweetId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Tweeted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "follower",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "followed",
+          "type": "address"
+        }
+      ],
+      "name": "Unfollowed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "blocker",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "blockedUser",
+          "type": "address"
+        }
+      ],
+      "name": "UserBlocked",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_userToBlock",
+          "type": "address"
+        }
+      ],
+      "name": "blockUser",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tweetId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_content",
+          "type": "string"
+        }
+      ],
+      "name": "commentOnTweet",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tweetId",
+          "type": "uint256"
+        }
+      ],
+      "name": "deleteTweet",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tweetId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_newContent",
+          "type": "string"
+        }
+      ],
+      "name": "editTweet",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_followed",
+          "type": "address"
+        }
+      ],
+      "name": "follow",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "generateConversationId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "getBlockedUsers",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "getConversation",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "content",
+              "type": "string"
+            },
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "createdAt",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Twitter.Message[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_follower",
+          "type": "address"
+        }
+      ],
+      "name": "getFollowing",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_count",
+          "type": "uint256"
+        }
+      ],
+      "name": "getLatestTweets",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "author",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "content",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "createdAt",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Twitter.Tweet[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_retweetId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getRetweet",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tweetId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTweetLikes",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_author",
+          "type": "address"
+        }
+      ],
+      "name": "getTweetsOf",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "author",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "content",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "createdAt",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Twitter.Tweet[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tweetId",
+          "type": "uint256"
+        }
+      ],
+      "name": "likeTweet",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_originalTweetId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_content",
+          "type": "string"
+        }
+      ],
+      "name": "retweet",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_operator",
+          "type": "address"
+        }
+      ],
+      "name": "revokeOperator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_content",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "sendMessage",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_content",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "sendMessageFromOperator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "setOperator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_content",
+          "type": "string"
+        }
+      ],
+      "name": "tweet",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_content",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "_author",
+          "type": "address"
+        }
+      ],
+      "name": "tweetFromOperator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_followed",
+          "type": "address"
+        }
+      ],
+      "name": "unfollow",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xeb44f624fdc5815aefae7fe4cae46d999d74d1b827caad913057baba1b783c53",
+  "receipt": {
+    "to": null,
+    "from": "0xca04E2E5cb3898bd1f28f1F487952052005A1dA3",
+    "contractAddress": "0x28502c371E6C05B1f5164FcD63Cf366eaD0082f6",
+    "transactionIndex": 43,
+    "gasUsed": "1778359",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x091a468f2dacd0fbefb70a4664daee9b0911904ef792b51930813df8a055044a",
+    "transactionHash": "0xeb44f624fdc5815aefae7fe4cae46d999d74d1b827caad913057baba1b783c53",
+    "logs": [],
+    "blockNumber": 5237079,
+    "cumulativeGasUsed": "8461624",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "63e3ecefc1cec4964c768a3761b5e018",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"author\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tweetId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"commentId\",\"type\":\"uint256\"}],\"name\":\"Commented\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"follower\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"followed\",\"type\":\"address\"}],\"name\":\"Followed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"author\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tweetId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"liker\",\"type\":\"address\"}],\"name\":\"Liked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"conversationId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"messageId\",\"type\":\"uint256\"}],\"name\":\"MessageSent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"OperatorRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"author\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tweetId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"retweetId\",\"type\":\"uint256\"}],\"name\":\"Retweeted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tweetId\",\"type\":\"uint256\"}],\"name\":\"TweetDeleted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tweetId\",\"type\":\"uint256\"}],\"name\":\"TweetEdited\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"author\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tweetId\",\"type\":\"uint256\"}],\"name\":\"Tweeted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"follower\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"followed\",\"type\":\"address\"}],\"name\":\"Unfollowed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"blocker\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"blockedUser\",\"type\":\"address\"}],\"name\":\"UserBlocked\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_userToBlock\",\"type\":\"address\"}],\"name\":\"blockUser\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tweetId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_content\",\"type\":\"string\"}],\"name\":\"commentOnTweet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tweetId\",\"type\":\"uint256\"}],\"name\":\"deleteTweet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tweetId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_newContent\",\"type\":\"string\"}],\"name\":\"editTweet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_followed\",\"type\":\"address\"}],\"name\":\"follow\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"generateConversationId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"getBlockedUsers\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"getConversation\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"content\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"createdAt\",\"type\":\"uint256\"}],\"internalType\":\"struct Twitter.Message[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_follower\",\"type\":\"address\"}],\"name\":\"getFollowing\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_count\",\"type\":\"uint256\"}],\"name\":\"getLatestTweets\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"author\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"content\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"createdAt\",\"type\":\"uint256\"}],\"internalType\":\"struct Twitter.Tweet[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_retweetId\",\"type\":\"uint256\"}],\"name\":\"getRetweet\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tweetId\",\"type\":\"uint256\"}],\"name\":\"getTweetLikes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_author\",\"type\":\"address\"}],\"name\":\"getTweetsOf\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"author\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"content\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"createdAt\",\"type\":\"uint256\"}],\"internalType\":\"struct Twitter.Tweet[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tweetId\",\"type\":\"uint256\"}],\"name\":\"likeTweet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_originalTweetId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_content\",\"type\":\"string\"}],\"name\":\"retweet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_operator\",\"type\":\"address\"}],\"name\":\"revokeOperator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_content\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"sendMessage\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_content\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"sendMessageFromOperator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"setOperator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_content\",\"type\":\"string\"}],\"name\":\"tweet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_content\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"_author\",\"type\":\"address\"}],\"name\":\"tweetFromOperator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_followed\",\"type\":\"address\"}],\"name\":\"unfollow\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Twitter.sol\":\"Twitter\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Twitter.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\n\\ncontract Twitter {\\n    struct Tweet {\\n        uint256 id;\\n        address author;\\n        string content;\\n        uint256 createdAt;\\n    }\\n\\n    struct Message {\\n        uint256 id;\\n        string content;\\n        address from;\\n        address to;\\n        uint256 createdAt;\\n    }\\n\\n    struct Comment {\\n    uint256 id;\\n    uint256 tweetId; // The ID of the tweet this comment is associated with\\n    address author;\\n    string content;\\n    uint256 createdAt;\\n}\\n\\n    mapping(uint256 => Tweet) private tweets;\\n    mapping(address => uint256[]) private tweetsOf;\\n    mapping(uint256 => Message[]) private conversations;\\n    mapping(address => address[]) private following;\\n    mapping(address => mapping(address => bool)) private operators;\\n    mapping(uint256 => address[]) private tweetLikes;\\n    mapping(uint256 => mapping(address => bool)) private hasLiked;\\n    mapping(uint256 => uint256) private retweets; // Maps a tweet ID to its original tweet ID\\n    mapping(uint256 => Comment[]) private comments; // Maps tweet ID to an array of comments\\n    mapping(address => mapping(address => bool)) private blocked;\\n\\n\\n\\n    //events to be emitted\\n    event Tweeted(address indexed author, uint256 tweetId);\\n    event Followed(address indexed follower, address indexed followed);\\n    event MessageSent(address indexed from, address indexed to, uint256 conversationId, uint256 messageId);\\n    event Retweeted(address indexed author, uint256 tweetId, uint256 retweetId);\\n    event Liked(address indexed author, uint256 tweetId, address indexed liker);\\n    event Commented(address indexed author, uint256 tweetId, uint256 commentId);\\n    event UserBlocked(address indexed blocker, address indexed blockedUser);\\n    event Unfollowed(address indexed follower, address indexed followed);\\n    event TweetEdited(uint256 tweetId);\\n    event TweetDeleted(uint256 tweetId);\\n    event OperatorRevoked(address indexed operator, address indexed user);\\n\\n\\n    uint256 private nextTweetId;\\n    uint256 private nextMessageId;\\n    uint256 private nextCommentId;\\n  \\n\\n    function tweetFromOperator(string calldata _content, address _author) external {\\n        require(operators[msg.sender][_author], \\\"You are not authorized to tweet on behalf of this user\\\");\\n       _createTweet(_content, _author);\\n    }\\n    function _createTweet(string calldata _content, address _author) private {\\n        tweets[nextTweetId] = Tweet({id:nextTweetId, author: _author, content: _content, createdAt: block.timestamp});\\n        tweetsOf[_author].push(nextTweetId);\\n        emit Tweeted(_author, nextTweetId);\\n        nextTweetId++;\\n    }\\n     function _sendMessage(string calldata _content, address _from, address _to) private {\\n        uint256 conversationId = generateConversationId(_from, _to);\\n        conversations[conversationId].push(Message({\\n            id: nextMessageId,\\n            content: _content,\\n            from: _from,\\n            to: _to,\\n            createdAt: block.timestamp\\n        }));\\n        emit MessageSent(_from, _to, conversationId, nextMessageId);\\n        nextMessageId ++;\\n    }\\n\\n      function tweet(string calldata _content) external {\\n        _createTweet(_content, msg.sender);\\n    }\\n\\n    function generateConversationId (address _from, address _to) public pure returns(uint256) {\\n            return uint256(keccak256(abi.encode(_from, _to)));\\n    }\\n    function sendMessage(string calldata _content, address _from, address _to) external {\\n        _sendMessage(_content, _from, _to);\\n\\n    }\\n\\n    function sendMessageFromOperator(string calldata _content, address _from, address _to) external {\\n        require(operators[msg.sender][_from], \\\"You are not authorized to send messages on behalf of this user\\\");\\n        _sendMessage(_content, _from, _to);\\n    }\\n    function likeTweet(uint256 _tweetId) external {\\n    require(!hasLiked[_tweetId][msg.sender], \\\"You have already liked this tweet\\\");\\n    tweetLikes[_tweetId].push(msg.sender);\\n    hasLiked[_tweetId][msg.sender] = true;\\n    emit Liked(tweets[_tweetId].author, _tweetId, msg.sender);\\n}\\n    function follow(address _followed) external {\\n        //msg.sender is following _followed\\n        following[msg.sender].push(_followed);\\n        emit Followed(msg.sender, _followed);\\n    }\\n\\nfunction retweet(uint256 _originalTweetId, string calldata _content) external {\\n    _createTweet(_content, msg.sender);\\n    uint256 retweetId = nextTweetId - 1; // Assuming _createTweet increments nextTweetId\\n    retweets[retweetId] = _originalTweetId;\\n    emit Retweeted(msg.sender, _originalTweetId, retweetId);\\n}\\n\\nfunction commentOnTweet(uint256 _tweetId, string calldata _content) external {\\n    require(_tweetId < nextTweetId, \\\"Tweet does not exist\\\");\\n    comments[_tweetId].push(Comment({\\n        id: nextCommentId,\\n        tweetId: _tweetId,\\n        author: msg.sender,\\n        content: _content,\\n        createdAt: block.timestamp\\n    }));\\n    \\n    emit Commented(msg.sender, _tweetId, nextCommentId);\\n    nextCommentId++;\\n}\\n\\n //set operator\\n    function setOperator(address _operator, address _user) external {\\n        require(msg.sender == _user, \\\"You can only set operator for yourself\\\");\\n        operators[_operator][_user] = true;\\n    }\\n\\n    function deleteTweet(uint256 _tweetId) external {\\n    require(msg.sender == tweets[_tweetId].author || operators[msg.sender][tweets[_tweetId].author], \\\"Only the author or an authorized operator can delete this tweet.\\\");\\n    delete tweets[_tweetId];\\n    // Emit an event for the tweet deletion\\n    emit TweetDeleted(_tweetId);\\n}\\n\\nfunction editTweet(uint256 _tweetId, string calldata _newContent) external {\\n    require(msg.sender == tweets[_tweetId].author || operators[msg.sender][tweets[_tweetId].author], \\\"Only the author or an authorized operator can edit this tweet.\\\");\\n    tweets[_tweetId].content = _newContent;\\n    // Emit an event for the tweet edit\\n    emit TweetEdited(_tweetId);\\n}\\nfunction unfollow(address _followed) external {\\n    // Find and remove _followed from the follower's list\\n    for (uint256 i = 0; i < following[msg.sender].length; i++) {\\n        if (following[msg.sender][i] == _followed) {\\n            following[msg.sender][i] = following[msg.sender][following[msg.sender].length - 1];\\n            following[msg.sender].pop();\\n            emit Unfollowed(msg.sender, _followed);\\n            return;\\n        }\\n    }\\n}\\n\\nfunction blockUser(address _userToBlock) external {\\n    blocked[msg.sender][_userToBlock] = true;\\n    // Optionally, handle the removal of the blocked user from the follower's list\\n    emit UserBlocked(msg.sender, _userToBlock);\\n}\\n    function revokeOperator(address _operator) external {\\n    operators[_operator][msg.sender] = false;\\n    emit OperatorRevoked(_operator, msg.sender);\\n}\\n\\n\\n\\n    \\n    function getConversation(address _from, address _to) external view returns(Message[] memory) {\\n        uint256 conversationId = generateConversationId(_from, _to);\\n        return conversations[conversationId];\\n    }\\n\\n\\n    function getFollowing(address _follower) external view returns(address[] memory) {\\n        return following[_follower];\\n    }\\n\\n    function getLatestTweets(uint256 _count) external view returns(Tweet[] memory) {\\n        require(_count > 0 && _count < nextTweetId, \\\"count can't be greater than nextTweetId\\\");\\n        Tweet[] memory _tweets = new Tweet[](_count);\\n        for(uint256 i = nextTweetId - _count; i < nextTweetId; i++) {\\n            _tweets[i] = tweets[i];\\n        }\\n        return _tweets;\\n    }\\n\\n\\n\\n    function getTweetsOf(address _author) external view returns(Tweet[] memory) {\\n        uint256[] memory tweetIds = tweetsOf[_author];\\n        Tweet[] memory _tweets = new Tweet[](tweetIds.length);\\n        for(uint256 i = 0; i < tweetIds.length; i++) {\\n            _tweets[i] = tweets[tweetIds[i]];\\n        }\\n        return _tweets;\\n    }\\n\\n    function getTweetLikes(uint256 _tweetId) external view returns (uint256) {\\n    return tweetLikes[_tweetId].length;\\n}\\nfunction getRetweet(uint256 _retweetId) external view returns(uint256) {\\n    return retweets[_retweetId];\\n}\\n\\n\\nfunction getBlockedUsers(address _user) external view returns (address[] memory) {\\n    uint256 count = 0;\\n    // Count blocked users first to initialize the array with the correct size\\n    for(uint256 i = 0; i < following[_user].length; i++) {\\n        if (blocked[_user][following[_user][i]]) {\\n            count++;\\n        }\\n    }\\n    \\n    address[] memory blockedUsers = new address[](count);\\n    uint256 index = 0;\\n    for(uint256 i = 0; i < following[_user].length; i++) {\\n        if (blocked[_user][following[_user][i]]) {\\n            blockedUsers[index] = following[_user][i];\\n            index++;\\n        }\\n    }\\n    return blockedUsers;\\n}\\n   \\n    \\n}\",\"keccak256\":\"0x188af51335bf72ef53672dd5cc8e2e5dc2400e525e7da39bbe2fa2aa37e3d282\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50611f31806100206000396000f3fe608060405234801561001057600080fd5b50600436106101425760003560e01c806398c0a0e6116100b8578063e4a57fad1161007c578063e4a57fad146102d1578063eae9e135146102e4578063f1ead126146102f7578063fad8b32a1461030a578063fb46d4c51461031d578063fd65e9811461033057600080fd5b806398c0a0e6146102655780639cad791314610278578063d1061d8b1461028b578063d8236dff1461029e578063e2c89163146102b157600080fd5b8063559a2d8e1161010a578063559a2d8e146101cb5780635775912a146101ec57806358fe03bc146101ff5780635ffc6ceb146102125780636418dae214610225578063949327d91461024557600080fd5b8063015a4ead14610147578063375eed271461015c5780633da01325146101855780634dbf27cc146101985780634dc0a687146101ab575b600080fd5b61015a6101553660046118b1565b610343565b005b61016f61016a3660046118d3565b6104c5565b60405161017c919061194c565b60405180910390f35b61015a6101933660046118b1565b610616565b61015a6101a63660046118b1565b61066f565b6101be6101b93660046119ef565b6106d9565b60405161017c9190611a08565b6101de6101d93660046118d3565b6108f8565b60405190815260200161017c565b61015a6101fa3660046119ef565b610930565b61015a61020d366004611ada565b610a6c565b61015a6102203660046119ef565b610bf8565b6101de6102333660046119ef565b60009081526007602052604090205490565b6102586102533660046118b1565b610d07565b60405161017c9190611b26565b61015a610273366004611b73565b610f1d565b61015a610286366004611ada565b610f2f565b61015a610299366004611b73565b610fa1565b6102586102ac3660046118b1565b61103a565b6101de6102bf3660046119ef565b60009081526005602052604090205490565b61015a6102df366004611bd8565b6110b0565b61015a6102f2366004611ada565b611152565b61015a6103053660046118d3565b611270565b61015a6103183660046118b1565b61130b565b61015a61032b366004611c2c565b611361565b6101be61033e3660046118b1565b61136c565b60005b336000908152600360205260409020548110156104c15733600090815260036020526040902080546001600160a01b03841691908390811061038a5761038a611c6e565b6000918252602090912001546001600160a01b0316036104af5733600090815260036020526040902080546103c190600190611c9a565b815481106103d1576103d1611c6e565b60009182526020808320909101543383526003909152604090912080546001600160a01b03909216918390811061040a5761040a611c6e565b600091825260208083209190910180546001600160a01b0319166001600160a01b03949094169390931790925533815260039091526040902080548061045257610452611cad565b600082815260208120820160001990810180546001600160a01b03191690559091019091556040516001600160a01b0384169133917f25b48012798806863072289354ed0b3849b73152482d9c6694e5cbb35f38d5e39190a35050565b806104b981611cc3565b915050610346565b5050565b606060006104d384846108f8565b905060026000828152602001908152602001600020805480602002602001604051908101604052809291908181526020016000905b8282101561060857838290600052602060002090600502016040518060a00160405290816000820154815260200160018201805461054590611cdc565b80601f016020809104026020016040519081016040528092919081815260200182805461057190611cdc565b80156105be5780601f10610593576101008083540402835291602001916105be565b820191906000526020600020905b8154815290600101906020018083116105a157829003601f168201915b505050918352505060028201546001600160a01b03908116602080840191909152600384015490911660408301526004909201546060909101529082526001929092019101610508565b505050509150505b92915050565b3360008181526009602090815260408083206001600160a01b0386168085529252808320805460ff19166001179055519092917f3d76c88b04bca9304ddabcfabdd594e649c10be33d0519e4b9842431cbe57e2c91a350565b336000818152600360209081526040808320805460018101825590845291832090910180546001600160a01b0319166001600160a01b03861690811790915590519092917f6178e95c138f06036cdc07a49ed6a3d23008969fa143baeceb037ebae22e8d1491a350565b60606000821180156106ec5750600a5482105b61074d5760405162461bcd60e51b815260206004820152602760248201527f636f756e742063616e27742062652067726561746572207468616e206e657874604482015266151dd9595d125960ca1b60648201526084015b60405180910390fd5b60008267ffffffffffffffff81111561076857610768611d16565b6040519080825280602002602001820160405280156107cd57816020015b6107ba60405180608001604052806000815260200160006001600160a01b0316815260200160608152602001600081525090565b8152602001906001900390816107865790505b509050600083600a546107e09190611c9a565b90505b600a548110156108f1576000818152602081815260409182902082516080810184528154815260018201546001600160a01b031692810192909252600281018054929391929184019161083590611cdc565b80601f016020809104026020016040519081016040528092919081815260200182805461086190611cdc565b80156108ae5780601f10610883576101008083540402835291602001916108ae565b820191906000526020600020905b81548152906001019060200180831161089157829003601f168201915b505050505081526020016003820154815250508282815181106108d3576108d3611c6e565b602002602001018190525080806108e990611cc3565b9150506107e3565b5092915050565b604080516001600160a01b03938416602080830191909152929093168382015280518084038201815260609093019052815191012090565b6000818152602081905260409020600101546001600160a01b03163314806109875750336000908152600460209081526040808320848452838352818420600101546001600160a01b0316845290915290205460ff165b6109fb576040805162461bcd60e51b81526020600482015260248101919091527f4f6e6c792074686520617574686f72206f7220616e20617574686f72697a656460448201527f206f70657261746f722063616e2064656c65746520746869732074776565742e6064820152608401610744565b60008181526020819052604081208181556001810180546001600160a01b031916905590610a2c600283018261183f565b506000600391909101556040518181527fcff984d3d6983751ef01f1bad6665f0a9ab887ed70e453a3e9d01009d82c9fd19060200160405180910390a150565b600a548310610ab45760405162461bcd60e51b8152602060048201526014602482015273151dd9595d08191bd95cc81b9bdd08195e1a5cdd60621b6044820152606401610744565b600860008481526020019081526020016000206040518060a00160405280600c548152602001858152602001336001600160a01b0316815260200184848080601f016020809104026020016040519081016040528093929190818152602001838380828437600092018290525093855250504260209384015250835460018082018655948252908290208351600590920201908155908201519281019290925560408101516002830180546001600160a01b0319166001600160a01b0390921691909117905560608101519091906003820190610b919082611d7a565b5060809190910151600490910155600c5460408051858152602081019290925233917fa0e62c8ea9e5bceff75f7eca374ea604c4df371246d5f5a4ddf1423ae9d6ce9d910160405180910390a2600c8054906000610bee83611cc3565b9190505550505050565b600081815260066020908152604080832033845290915290205460ff1615610c6c5760405162461bcd60e51b815260206004820152602160248201527f596f75206861766520616c7265616479206c696b6564207468697320747765656044820152601d60fa1b6064820152608401610744565b60008181526005602090815260408083208054600180820183559185528385200180546001600160a01b03191633908117909155858552600684528285208186528452828520805460ff19168317905585855284845293829020015490518481526001600160a01b03909116917f6e2e21cd97086c71e70c71450b3afa83e350bfc5238b5f1ffd46e9edbd780e42910160405180910390a350565b60606000805b6001600160a01b038416600090815260036020526040902054811015610db1576001600160a01b038416600090815260096020908152604080832060039092528220805491929184908110610d6457610d64611c6e565b60009182526020808320909101546001600160a01b0316835282019290925260400190205460ff1615610d9f5781610d9b81611cc3565b9250505b80610da981611cc3565b915050610d0d565b5060008167ffffffffffffffff811115610dcd57610dcd611d16565b604051908082528060200260200182016040528015610df6578160200160208202803683370190505b5090506000805b6001600160a01b038616600090815260036020526040902054811015610f13576001600160a01b038616600090815260096020908152604080832060039092528220805491929184908110610e5457610e54611c6e565b60009182526020808320909101546001600160a01b0316835282019290925260400190205460ff1615610f01576001600160a01b0386166000908152600360205260409020805482908110610eab57610eab611c6e565b9060005260206000200160009054906101000a90046001600160a01b0316838381518110610edb57610edb611c6e565b6001600160a01b039092166020928302919091019091015281610efd81611cc3565b9250505b80610f0b81611cc3565b915050610dfd565b5090949350505050565b610f29848484846115a5565b50505050565b610f3a828233611711565b60006001600a54610f4b9190611c9a565b600081815260076020908152604091829020879055815187815290810183905291925033917f0573cd52ff2f97297c4f48fc3e9d9b7e920d22c2437f6e07a0915feb2bdf8ecc910160405180910390a250505050565b3360009081526004602090815260408083206001600160a01b038616845290915290205460ff16610f1d5760405162461bcd60e51b815260206004820152603e60248201527f596f7520617265206e6f7420617574686f72697a656420746f2073656e64206d60448201527f65737361676573206f6e20626568616c66206f662074686973207573657200006064820152608401610744565b6001600160a01b0381166000908152600360209081526040918290208054835181840281018401909452808452606093928301828280156110a457602002820191906000526020600020905b81546001600160a01b03168152600190910190602001808311611086575b50505050509050919050565b3360009081526004602090815260408083206001600160a01b038516845290915290205460ff166111425760405162461bcd60e51b815260206004820152603660248201527f596f7520617265206e6f7420617574686f72697a656420746f2074776565742060448201527537b7103132b430b6331037b3103a3434b9903ab9b2b960511b6064820152608401610744565b61114d838383611711565b505050565b6000838152602081905260409020600101546001600160a01b03163314806111a95750336000908152600460209081526040808320868452838352818420600101546001600160a01b0316845290915290205460ff165b61121b5760405162461bcd60e51b815260206004820152603e60248201527f4f6e6c792074686520617574686f72206f7220616e20617574686f72697a656460448201527f206f70657261746f722063616e206564697420746869732074776565742e00006064820152608401610744565b6000838152602081905260409020600201611237828483611e3a565b506040518381527f32eb096c18703ddbd7569136e7d080e35a335d065d1b244cf302529a99474daf9060200160405180910390a1505050565b336001600160a01b038216146112d75760405162461bcd60e51b815260206004820152602660248201527f596f752063616e206f6e6c7920736574206f70657261746f7220666f7220796f6044820152653ab939b2b63360d11b6064820152608401610744565b6001600160a01b0391821660009081526004602090815260408083209390941682529190915220805460ff19166001179055565b6001600160a01b0381166000818152600460209081526040808320338085529252808320805460ff19169055519092917fa8082fae8d1bd57faeb4dde45721b46afb72c45e72e5deb2a355bd997f6251a991a350565b6104c1828233611711565b6001600160a01b03811660009081526001602090815260408083208054825181850281018501909352808352606094938301828280156113cb57602002820191906000526020600020905b8154815260200190600101908083116113b7575b505050505090506000815167ffffffffffffffff8111156113ee576113ee611d16565b60405190808252806020026020018201604052801561145357816020015b61144060405180608001604052806000815260200160006001600160a01b0316815260200160608152602001600081525090565b81526020019060019003908161140c5790505b50905060005b825181101561159d5760008084838151811061147757611477611c6e565b60200260200101518152602001908152602001600020604051806080016040529081600082015481526020016001820160009054906101000a90046001600160a01b03166001600160a01b03166001600160a01b031681526020016002820180546114e190611cdc565b80601f016020809104026020016040519081016040528092919081815260200182805461150d90611cdc565b801561155a5780601f1061152f5761010080835404028352916020019161155a565b820191906000526020600020905b81548152906001019060200180831161153d57829003601f168201915b5050505050815260200160038201548152505082828151811061157f5761157f611c6e565b6020026020010181905250808061159590611cc3565b915050611459565b509392505050565b60006115b183836108f8565b9050600260008281526020019081526020016000206040518060a00160405280600b54815260200187878080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201829052509385525050506001600160a01b038088166020808501919091529087166040840152426060909301929092528354600181810186559482529082902083516005909202019081559082015191929091908201906116689082611d7a565b506040828101516002830180546001600160a01b03199081166001600160a01b03938416179091556060850151600385018054909216908316179055608090930151600490920191909155600b5481518481526020810191909152848316928616917ffa00ffce6051230b4361a25cb8c6cf798674abf770922e7c08373265c95fc027910160405180910390a3600b805490600061170583611cc3565b91905055505050505050565b6040518060800160405280600a548152602001826001600160a01b0316815260200184848080601f016020809104026020016040519081016040528093929190818152602001838380828437600092018290525093855250504260209384015250600a54815280825260409081902083518155918301516001830180546001600160a01b0319166001600160a01b0390921691909117905582015160028201906117bb9082611d7a565b50606091909101516003909101556001600160a01b0381166000818152600160208181526040808420600a8054825495860183559186529483902090930192909255915490519081527fd821f772821e57c22b73275f1268407508bc4b8e3e66e7f47c367dccb901cb49910160405180910390a2600a8054906000610bee83611cc3565b50805461184b90611cdc565b6000825580601f1061185b575050565b601f016020900490600052602060002090810190611879919061187c565b50565b5b80821115611891576000815560010161187d565b5090565b80356001600160a01b03811681146118ac57600080fd5b919050565b6000602082840312156118c357600080fd5b6118cc82611895565b9392505050565b600080604083850312156118e657600080fd5b6118ef83611895565b91506118fd60208401611895565b90509250929050565b6000815180845260005b8181101561192c57602081850181015186830182015201611910565b506000602082860101526020601f19601f83011685010191505092915050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b838110156119e157603f19898403018552815160a08151855288820151818a8701526119a182870182611906565b838a01516001600160a01b03908116888c015260608086015190911690880152608093840151939096019290925250509386019390860190600101611973565b509098975050505050505050565b600060208284031215611a0157600080fd5b5035919050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b838110156119e157888303603f19018552815180518452878101516001600160a01b03168885015286810151608088860181905290611a7082870182611906565b60609384015196909301959095525094870194925090860190600101611a2f565b60008083601f840112611aa357600080fd5b50813567ffffffffffffffff811115611abb57600080fd5b602083019150836020828501011115611ad357600080fd5b9250929050565b600080600060408486031215611aef57600080fd5b83359250602084013567ffffffffffffffff811115611b0d57600080fd5b611b1986828701611a91565b9497909650939450505050565b6020808252825182820181905260009190848201906040850190845b81811015611b675783516001600160a01b031683529284019291840191600101611b42565b50909695505050505050565b60008060008060608587031215611b8957600080fd5b843567ffffffffffffffff811115611ba057600080fd5b611bac87828801611a91565b9095509350611bbf905060208601611895565b9150611bcd60408601611895565b905092959194509250565b600080600060408486031215611bed57600080fd5b833567ffffffffffffffff811115611c0457600080fd5b611c1086828701611a91565b9094509250611c23905060208501611895565b90509250925092565b60008060208385031215611c3f57600080fd5b823567ffffffffffffffff811115611c5657600080fd5b611c6285828601611a91565b90969095509350505050565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b8181038181111561061057610610611c84565b634e487b7160e01b600052603160045260246000fd5b600060018201611cd557611cd5611c84565b5060010190565b600181811c90821680611cf057607f821691505b602082108103611d1057634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052604160045260246000fd5b601f82111561114d57600081815260208120601f850160051c81016020861015611d535750805b601f850160051c820191505b81811015611d7257828155600101611d5f565b505050505050565b815167ffffffffffffffff811115611d9457611d94611d16565b611da881611da28454611cdc565b84611d2c565b602080601f831160018114611ddd5760008415611dc55750858301515b600019600386901b1c1916600185901b178555611d72565b600085815260208120601f198616915b82811015611e0c57888601518255948401946001909101908401611ded565b5085821015611e2a5787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b67ffffffffffffffff831115611e5257611e52611d16565b611e6683611e608354611cdc565b83611d2c565b6000601f841160018114611e9a5760008515611e825750838201355b600019600387901b1c1916600186901b178355611ef4565b600083815260209020601f19861690835b82811015611ecb5786850135825560209485019460019092019101611eab565b5086821015611ee85760001960f88860031b161c19848701351681555b505060018560011b0183555b505050505056fea2646970667358221220fcc957b31b5dc7b91dd5887a97e6b6d6a490e37edf7dc12dc2b7a6d738dd920464736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106101425760003560e01c806398c0a0e6116100b8578063e4a57fad1161007c578063e4a57fad146102d1578063eae9e135146102e4578063f1ead126146102f7578063fad8b32a1461030a578063fb46d4c51461031d578063fd65e9811461033057600080fd5b806398c0a0e6146102655780639cad791314610278578063d1061d8b1461028b578063d8236dff1461029e578063e2c89163146102b157600080fd5b8063559a2d8e1161010a578063559a2d8e146101cb5780635775912a146101ec57806358fe03bc146101ff5780635ffc6ceb146102125780636418dae214610225578063949327d91461024557600080fd5b8063015a4ead14610147578063375eed271461015c5780633da01325146101855780634dbf27cc146101985780634dc0a687146101ab575b600080fd5b61015a6101553660046118b1565b610343565b005b61016f61016a3660046118d3565b6104c5565b60405161017c919061194c565b60405180910390f35b61015a6101933660046118b1565b610616565b61015a6101a63660046118b1565b61066f565b6101be6101b93660046119ef565b6106d9565b60405161017c9190611a08565b6101de6101d93660046118d3565b6108f8565b60405190815260200161017c565b61015a6101fa3660046119ef565b610930565b61015a61020d366004611ada565b610a6c565b61015a6102203660046119ef565b610bf8565b6101de6102333660046119ef565b60009081526007602052604090205490565b6102586102533660046118b1565b610d07565b60405161017c9190611b26565b61015a610273366004611b73565b610f1d565b61015a610286366004611ada565b610f2f565b61015a610299366004611b73565b610fa1565b6102586102ac3660046118b1565b61103a565b6101de6102bf3660046119ef565b60009081526005602052604090205490565b61015a6102df366004611bd8565b6110b0565b61015a6102f2366004611ada565b611152565b61015a6103053660046118d3565b611270565b61015a6103183660046118b1565b61130b565b61015a61032b366004611c2c565b611361565b6101be61033e3660046118b1565b61136c565b60005b336000908152600360205260409020548110156104c15733600090815260036020526040902080546001600160a01b03841691908390811061038a5761038a611c6e565b6000918252602090912001546001600160a01b0316036104af5733600090815260036020526040902080546103c190600190611c9a565b815481106103d1576103d1611c6e565b60009182526020808320909101543383526003909152604090912080546001600160a01b03909216918390811061040a5761040a611c6e565b600091825260208083209190910180546001600160a01b0319166001600160a01b03949094169390931790925533815260039091526040902080548061045257610452611cad565b600082815260208120820160001990810180546001600160a01b03191690559091019091556040516001600160a01b0384169133917f25b48012798806863072289354ed0b3849b73152482d9c6694e5cbb35f38d5e39190a35050565b806104b981611cc3565b915050610346565b5050565b606060006104d384846108f8565b905060026000828152602001908152602001600020805480602002602001604051908101604052809291908181526020016000905b8282101561060857838290600052602060002090600502016040518060a00160405290816000820154815260200160018201805461054590611cdc565b80601f016020809104026020016040519081016040528092919081815260200182805461057190611cdc565b80156105be5780601f10610593576101008083540402835291602001916105be565b820191906000526020600020905b8154815290600101906020018083116105a157829003601f168201915b505050918352505060028201546001600160a01b03908116602080840191909152600384015490911660408301526004909201546060909101529082526001929092019101610508565b505050509150505b92915050565b3360008181526009602090815260408083206001600160a01b0386168085529252808320805460ff19166001179055519092917f3d76c88b04bca9304ddabcfabdd594e649c10be33d0519e4b9842431cbe57e2c91a350565b336000818152600360209081526040808320805460018101825590845291832090910180546001600160a01b0319166001600160a01b03861690811790915590519092917f6178e95c138f06036cdc07a49ed6a3d23008969fa143baeceb037ebae22e8d1491a350565b60606000821180156106ec5750600a5482105b61074d5760405162461bcd60e51b815260206004820152602760248201527f636f756e742063616e27742062652067726561746572207468616e206e657874604482015266151dd9595d125960ca1b60648201526084015b60405180910390fd5b60008267ffffffffffffffff81111561076857610768611d16565b6040519080825280602002602001820160405280156107cd57816020015b6107ba60405180608001604052806000815260200160006001600160a01b0316815260200160608152602001600081525090565b8152602001906001900390816107865790505b509050600083600a546107e09190611c9a565b90505b600a548110156108f1576000818152602081815260409182902082516080810184528154815260018201546001600160a01b031692810192909252600281018054929391929184019161083590611cdc565b80601f016020809104026020016040519081016040528092919081815260200182805461086190611cdc565b80156108ae5780601f10610883576101008083540402835291602001916108ae565b820191906000526020600020905b81548152906001019060200180831161089157829003601f168201915b505050505081526020016003820154815250508282815181106108d3576108d3611c6e565b602002602001018190525080806108e990611cc3565b9150506107e3565b5092915050565b604080516001600160a01b03938416602080830191909152929093168382015280518084038201815260609093019052815191012090565b6000818152602081905260409020600101546001600160a01b03163314806109875750336000908152600460209081526040808320848452838352818420600101546001600160a01b0316845290915290205460ff165b6109fb576040805162461bcd60e51b81526020600482015260248101919091527f4f6e6c792074686520617574686f72206f7220616e20617574686f72697a656460448201527f206f70657261746f722063616e2064656c65746520746869732074776565742e6064820152608401610744565b60008181526020819052604081208181556001810180546001600160a01b031916905590610a2c600283018261183f565b506000600391909101556040518181527fcff984d3d6983751ef01f1bad6665f0a9ab887ed70e453a3e9d01009d82c9fd19060200160405180910390a150565b600a548310610ab45760405162461bcd60e51b8152602060048201526014602482015273151dd9595d08191bd95cc81b9bdd08195e1a5cdd60621b6044820152606401610744565b600860008481526020019081526020016000206040518060a00160405280600c548152602001858152602001336001600160a01b0316815260200184848080601f016020809104026020016040519081016040528093929190818152602001838380828437600092018290525093855250504260209384015250835460018082018655948252908290208351600590920201908155908201519281019290925560408101516002830180546001600160a01b0319166001600160a01b0390921691909117905560608101519091906003820190610b919082611d7a565b5060809190910151600490910155600c5460408051858152602081019290925233917fa0e62c8ea9e5bceff75f7eca374ea604c4df371246d5f5a4ddf1423ae9d6ce9d910160405180910390a2600c8054906000610bee83611cc3565b9190505550505050565b600081815260066020908152604080832033845290915290205460ff1615610c6c5760405162461bcd60e51b815260206004820152602160248201527f596f75206861766520616c7265616479206c696b6564207468697320747765656044820152601d60fa1b6064820152608401610744565b60008181526005602090815260408083208054600180820183559185528385200180546001600160a01b03191633908117909155858552600684528285208186528452828520805460ff19168317905585855284845293829020015490518481526001600160a01b03909116917f6e2e21cd97086c71e70c71450b3afa83e350bfc5238b5f1ffd46e9edbd780e42910160405180910390a350565b60606000805b6001600160a01b038416600090815260036020526040902054811015610db1576001600160a01b038416600090815260096020908152604080832060039092528220805491929184908110610d6457610d64611c6e565b60009182526020808320909101546001600160a01b0316835282019290925260400190205460ff1615610d9f5781610d9b81611cc3565b9250505b80610da981611cc3565b915050610d0d565b5060008167ffffffffffffffff811115610dcd57610dcd611d16565b604051908082528060200260200182016040528015610df6578160200160208202803683370190505b5090506000805b6001600160a01b038616600090815260036020526040902054811015610f13576001600160a01b038616600090815260096020908152604080832060039092528220805491929184908110610e5457610e54611c6e565b60009182526020808320909101546001600160a01b0316835282019290925260400190205460ff1615610f01576001600160a01b0386166000908152600360205260409020805482908110610eab57610eab611c6e565b9060005260206000200160009054906101000a90046001600160a01b0316838381518110610edb57610edb611c6e565b6001600160a01b039092166020928302919091019091015281610efd81611cc3565b9250505b80610f0b81611cc3565b915050610dfd565b5090949350505050565b610f29848484846115a5565b50505050565b610f3a828233611711565b60006001600a54610f4b9190611c9a565b600081815260076020908152604091829020879055815187815290810183905291925033917f0573cd52ff2f97297c4f48fc3e9d9b7e920d22c2437f6e07a0915feb2bdf8ecc910160405180910390a250505050565b3360009081526004602090815260408083206001600160a01b038616845290915290205460ff16610f1d5760405162461bcd60e51b815260206004820152603e60248201527f596f7520617265206e6f7420617574686f72697a656420746f2073656e64206d60448201527f65737361676573206f6e20626568616c66206f662074686973207573657200006064820152608401610744565b6001600160a01b0381166000908152600360209081526040918290208054835181840281018401909452808452606093928301828280156110a457602002820191906000526020600020905b81546001600160a01b03168152600190910190602001808311611086575b50505050509050919050565b3360009081526004602090815260408083206001600160a01b038516845290915290205460ff166111425760405162461bcd60e51b815260206004820152603660248201527f596f7520617265206e6f7420617574686f72697a656420746f2074776565742060448201527537b7103132b430b6331037b3103a3434b9903ab9b2b960511b6064820152608401610744565b61114d838383611711565b505050565b6000838152602081905260409020600101546001600160a01b03163314806111a95750336000908152600460209081526040808320868452838352818420600101546001600160a01b0316845290915290205460ff165b61121b5760405162461bcd60e51b815260206004820152603e60248201527f4f6e6c792074686520617574686f72206f7220616e20617574686f72697a656460448201527f206f70657261746f722063616e206564697420746869732074776565742e00006064820152608401610744565b6000838152602081905260409020600201611237828483611e3a565b506040518381527f32eb096c18703ddbd7569136e7d080e35a335d065d1b244cf302529a99474daf9060200160405180910390a1505050565b336001600160a01b038216146112d75760405162461bcd60e51b815260206004820152602660248201527f596f752063616e206f6e6c7920736574206f70657261746f7220666f7220796f6044820152653ab939b2b63360d11b6064820152608401610744565b6001600160a01b0391821660009081526004602090815260408083209390941682529190915220805460ff19166001179055565b6001600160a01b0381166000818152600460209081526040808320338085529252808320805460ff19169055519092917fa8082fae8d1bd57faeb4dde45721b46afb72c45e72e5deb2a355bd997f6251a991a350565b6104c1828233611711565b6001600160a01b03811660009081526001602090815260408083208054825181850281018501909352808352606094938301828280156113cb57602002820191906000526020600020905b8154815260200190600101908083116113b7575b505050505090506000815167ffffffffffffffff8111156113ee576113ee611d16565b60405190808252806020026020018201604052801561145357816020015b61144060405180608001604052806000815260200160006001600160a01b0316815260200160608152602001600081525090565b81526020019060019003908161140c5790505b50905060005b825181101561159d5760008084838151811061147757611477611c6e565b60200260200101518152602001908152602001600020604051806080016040529081600082015481526020016001820160009054906101000a90046001600160a01b03166001600160a01b03166001600160a01b031681526020016002820180546114e190611cdc565b80601f016020809104026020016040519081016040528092919081815260200182805461150d90611cdc565b801561155a5780601f1061152f5761010080835404028352916020019161155a565b820191906000526020600020905b81548152906001019060200180831161153d57829003601f168201915b5050505050815260200160038201548152505082828151811061157f5761157f611c6e565b6020026020010181905250808061159590611cc3565b915050611459565b509392505050565b60006115b183836108f8565b9050600260008281526020019081526020016000206040518060a00160405280600b54815260200187878080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201829052509385525050506001600160a01b038088166020808501919091529087166040840152426060909301929092528354600181810186559482529082902083516005909202019081559082015191929091908201906116689082611d7a565b506040828101516002830180546001600160a01b03199081166001600160a01b03938416179091556060850151600385018054909216908316179055608090930151600490920191909155600b5481518481526020810191909152848316928616917ffa00ffce6051230b4361a25cb8c6cf798674abf770922e7c08373265c95fc027910160405180910390a3600b805490600061170583611cc3565b91905055505050505050565b6040518060800160405280600a548152602001826001600160a01b0316815260200184848080601f016020809104026020016040519081016040528093929190818152602001838380828437600092018290525093855250504260209384015250600a54815280825260409081902083518155918301516001830180546001600160a01b0319166001600160a01b0390921691909117905582015160028201906117bb9082611d7a565b50606091909101516003909101556001600160a01b0381166000818152600160208181526040808420600a8054825495860183559186529483902090930192909255915490519081527fd821f772821e57c22b73275f1268407508bc4b8e3e66e7f47c367dccb901cb49910160405180910390a2600a8054906000610bee83611cc3565b50805461184b90611cdc565b6000825580601f1061185b575050565b601f016020900490600052602060002090810190611879919061187c565b50565b5b80821115611891576000815560010161187d565b5090565b80356001600160a01b03811681146118ac57600080fd5b919050565b6000602082840312156118c357600080fd5b6118cc82611895565b9392505050565b600080604083850312156118e657600080fd5b6118ef83611895565b91506118fd60208401611895565b90509250929050565b6000815180845260005b8181101561192c57602081850181015186830182015201611910565b506000602082860101526020601f19601f83011685010191505092915050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b838110156119e157603f19898403018552815160a08151855288820151818a8701526119a182870182611906565b838a01516001600160a01b03908116888c015260608086015190911690880152608093840151939096019290925250509386019390860190600101611973565b509098975050505050505050565b600060208284031215611a0157600080fd5b5035919050565b60006020808301818452808551808352604092508286019150828160051b87010184880160005b838110156119e157888303603f19018552815180518452878101516001600160a01b03168885015286810151608088860181905290611a7082870182611906565b60609384015196909301959095525094870194925090860190600101611a2f565b60008083601f840112611aa357600080fd5b50813567ffffffffffffffff811115611abb57600080fd5b602083019150836020828501011115611ad357600080fd5b9250929050565b600080600060408486031215611aef57600080fd5b83359250602084013567ffffffffffffffff811115611b0d57600080fd5b611b1986828701611a91565b9497909650939450505050565b6020808252825182820181905260009190848201906040850190845b81811015611b675783516001600160a01b031683529284019291840191600101611b42565b50909695505050505050565b60008060008060608587031215611b8957600080fd5b843567ffffffffffffffff811115611ba057600080fd5b611bac87828801611a91565b9095509350611bbf905060208601611895565b9150611bcd60408601611895565b905092959194509250565b600080600060408486031215611bed57600080fd5b833567ffffffffffffffff811115611c0457600080fd5b611c1086828701611a91565b9094509250611c23905060208501611895565b90509250925092565b60008060208385031215611c3f57600080fd5b823567ffffffffffffffff811115611c5657600080fd5b611c6285828601611a91565b90969095509350505050565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b8181038181111561061057610610611c84565b634e487b7160e01b600052603160045260246000fd5b600060018201611cd557611cd5611c84565b5060010190565b600181811c90821680611cf057607f821691505b602082108103611d1057634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052604160045260246000fd5b601f82111561114d57600081815260208120601f850160051c81016020861015611d535750805b601f850160051c820191505b81811015611d7257828155600101611d5f565b505050505050565b815167ffffffffffffffff811115611d9457611d94611d16565b611da881611da28454611cdc565b84611d2c565b602080601f831160018114611ddd5760008415611dc55750858301515b600019600386901b1c1916600185901b178555611d72565b600085815260208120601f198616915b82811015611e0c57888601518255948401946001909101908401611ded565b5085821015611e2a5787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b67ffffffffffffffff831115611e5257611e52611d16565b611e6683611e608354611cdc565b83611d2c565b6000601f841160018114611e9a5760008515611e825750838201355b600019600387901b1c1916600186901b178355611ef4565b600083815260209020601f19861690835b82811015611ecb5786850135825560209485019460019092019101611eab565b5086821015611ee85760001960f88860031b161c19848701351681555b505060018560011b0183555b505050505056fea2646970667358221220fcc957b31b5dc7b91dd5887a97e6b6d6a490e37edf7dc12dc2b7a6d738dd920464736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 37,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "tweets",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_uint256,t_struct(Tweet)10_storage)"
+      },
+      {
+        "astId": 42,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "tweetsOf",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)"
+      },
+      {
+        "astId": 48,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "conversations",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_uint256,t_array(t_struct(Message)21_storage)dyn_storage)"
+      },
+      {
+        "astId": 53,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "following",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_array(t_address)dyn_storage)"
+      },
+      {
+        "astId": 59,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "operators",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_mapping(t_address,t_bool))"
+      },
+      {
+        "astId": 64,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "tweetLikes",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_mapping(t_uint256,t_array(t_address)dyn_storage)"
+      },
+      {
+        "astId": 70,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "hasLiked",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))"
+      },
+      {
+        "astId": 74,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "retweets",
+        "offset": 0,
+        "slot": "7",
+        "type": "t_mapping(t_uint256,t_uint256)"
+      },
+      {
+        "astId": 80,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "comments",
+        "offset": 0,
+        "slot": "8",
+        "type": "t_mapping(t_uint256,t_array(t_struct(Comment)32_storage)dyn_storage)"
+      },
+      {
+        "astId": 86,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "blocked",
+        "offset": 0,
+        "slot": "9",
+        "type": "t_mapping(t_address,t_mapping(t_address,t_bool))"
+      },
+      {
+        "astId": 160,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "nextTweetId",
+        "offset": 0,
+        "slot": "10",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 162,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "nextMessageId",
+        "offset": 0,
+        "slot": "11",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 164,
+        "contract": "contracts/Twitter.sol:Twitter",
+        "label": "nextCommentId",
+        "offset": 0,
+        "slot": "12",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_array(t_struct(Comment)32_storage)dyn_storage": {
+        "base": "t_struct(Comment)32_storage",
+        "encoding": "dynamic_array",
+        "label": "struct Twitter.Comment[]",
+        "numberOfBytes": "32"
+      },
+      "t_array(t_struct(Message)21_storage)dyn_storage": {
+        "base": "t_struct(Message)21_storage",
+        "encoding": "dynamic_array",
+        "label": "struct Twitter.Message[]",
+        "numberOfBytes": "32"
+      },
+      "t_array(t_uint256)dyn_storage": {
+        "base": "t_uint256",
+        "encoding": "dynamic_array",
+        "label": "uint256[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_array(t_address)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => address[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_address)dyn_storage"
+      },
+      "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_uint256)dyn_storage"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(address => bool))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_bool)"
+      },
+      "t_mapping(t_uint256,t_array(t_address)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => address[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_address)dyn_storage"
+      },
+      "t_mapping(t_uint256,t_array(t_struct(Comment)32_storage)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => struct Twitter.Comment[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_struct(Comment)32_storage)dyn_storage"
+      },
+      "t_mapping(t_uint256,t_array(t_struct(Message)21_storage)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => struct Twitter.Message[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_struct(Message)21_storage)dyn_storage"
+      },
+      "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => mapping(address => bool))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_bool)"
+      },
+      "t_mapping(t_uint256,t_struct(Tweet)10_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => struct Twitter.Tweet)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Tweet)10_storage"
+      },
+      "t_mapping(t_uint256,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Comment)32_storage": {
+        "encoding": "inplace",
+        "label": "struct Twitter.Comment",
+        "members": [
+          {
+            "astId": 23,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "id",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 25,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "tweetId",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 27,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "author",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address"
+          },
+          {
+            "astId": 29,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "content",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 31,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "createdAt",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "160"
+      },
+      "t_struct(Message)21_storage": {
+        "encoding": "inplace",
+        "label": "struct Twitter.Message",
+        "members": [
+          {
+            "astId": 12,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "id",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 14,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "content",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 16,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "from",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address"
+          },
+          {
+            "astId": 18,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "to",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address"
+          },
+          {
+            "astId": 20,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "createdAt",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "160"
+      },
+      "t_struct(Tweet)10_storage": {
+        "encoding": "inplace",
+        "label": "struct Twitter.Tweet",
+        "members": [
+          {
+            "astId": 3,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "id",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 5,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "author",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address"
+          },
+          {
+            "astId": 7,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "content",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 9,
+            "contract": "contracts/Twitter.sol:Twitter",
+            "label": "createdAt",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "128"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
